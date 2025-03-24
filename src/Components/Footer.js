@@ -4,7 +4,7 @@ import logo from '../assets/Logo.svg';
 function Footer() {
   return (
     <footer>
-        <div>
+        <div className='continor d-flex justify-between'>
             <img src={logo} alt=''/>
             <div className=''>
                 <h6>Doormat Nav igation</h6>
@@ -33,8 +33,9 @@ function Footer() {
                     <li>email</li>
                 </ul>
             </div>
+            </div>
 
-        </div>
+
     </footer>
   )
 }

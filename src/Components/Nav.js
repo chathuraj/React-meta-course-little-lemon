@@ -3,7 +3,7 @@ import logo from '../assets/Logo.svg';
 
 function Nav() {
   return (
-    <nav>
+    <nav className='continor'>
         <ul>
             <li><a href='#home'><img src={logo} alt="Little Lemon" /> </a></li>
             <li><a href="#home">Home</a></li>
