@@ -1,0 +1,48 @@
+.callToActionContinor{
+    padding: 5em;
+    background-color: #495e57;
+    color: #fff;
+}
+
+.left-Side{
+    
+    img{
+        width: 375px;
+        height: auto;
+        border-radius: 16px;
+    }
+ 
+    
+}
+.right-Side{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    .callToAction{
+        margin-top: auto;
+    }
+}
+
+
+.title{
+    h2{
+        font-size: 3rem;
+        margin: 0;
+    }
+    p{
+        margin: 0;
+    }
+}
+
+@media (max-width: 715px) {
+    .left-Side img{
+        margin-top: 10px;
+        width: 100%;
+    }
+    .callToActionContinor{
+        padding: 20px;
+        .d-flex{
+            display: block;
+        }
+    }
+}

@@ -6,30 +6,66 @@ body{
 }
 
 header{
-    background-color: antiquewhite;
-    padding: 2em;
+    background-color: #edefee;
+    height: 4rem;
+    padding: 1rem;
 }
 nav ul{
     display: flex;
     gap:20px;
     align-items: center;
     list-style: none;
+    margin: 0px;
+}
+ul li a {
+  color: #000;
+  font-family: Karla;
+  font-size: 1.1em;
+  text-decoration: none;
 }
 ul{
     list-style: none;
+    width: 100%;
 }
 ul li:nth-child(2){
     margin-left: auto;
 }
+ul li a{
+  text-decoration: none;
+  font-weight: 600;
+}
+header .continor{
+  display: flex;
+  width: 100%;
+}
 
 main{
-    background-color: aquamarine;
     display: flex;
+    flex-direction: column;
 }
 
 footer{
-    background-color: bisque;
+    background: #495e57;
     padding: 2em;
+    h6{
+      color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0 0 1rem;
+    }
+    ul{
+      padding-left: unset;
+      li , li a{
+        color: #fff;
+        margin: .5rem 0;
+        text-decoration: none;
+        font-weight:unset;
+      }
+    }
+    .footer-logo{
+      height: 170px;
+    object-fit: contain;
+    }
 }
 .d-flex{
     display: flex; 
@@ -37,16 +73,45 @@ footer{
 .justify-between{
     justify-content: space-between;
 }
-
+.justify-center{
+  justify-content: center;
+}
+.align-items{
+  align-items: center;
+}
 /* .continor{
     max-width: 980px;
     margin: 0 auto;
 } */
-
+.gap-10{
+  gap:10px;
+}
+.gap-50{
+  gap:50px;
+}
+.margin-0{
+  margin:0px;
+}
 .col-12{
     grid-column: 1/ span 12;
 }
-
+button{
+  height: 2.5rem;
+  width: 10rem;
+  background: #000;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.testimonial-box{
+  max-width: 25%;
+  background-color: aliceblue;
+  padding: 10px;
+}
+.pb-20{
+  padding-bottom: 20px;
+}
 .continor {
     max-width: 980px;
     margin: 0 auto;
@@ -54,11 +119,81 @@ footer{
     grid-template-columns: repeat(4, 1fr);  /* 4 columns by default for desktop*/
      gap: 2rem;  /* Space between grid items */
   }
+  .continor-flex{
+    max-width: 980px;
+    margin: 0 auto;
+  }
 
+  .flex-col{
+    flex-direction: column;
+  }
+/* Menu Button (Hamburger) */
+.menu-btn {
+  background: none;
+  border: none;
+  color: #000;
+  font-size: 28px;
+  cursor: pointer;
+  display: none; /* Hidden by default on large screens */
+}
   @media only screen and (max-width: 768px) {
     .continor {
       grid-template-columns: repeat(2, 1fr);  /*// Switch to 2 columns on tablet*/
     }
+
+
+  /* Mobile Styles */
+  header{
+    padding: .5em;
+  }
+.open-containor{
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+}
+.open{
+  height: 100vh;
+  z-index: 1;
+}
+  .menu-btn {
+    display: block;
+    margin-left: auto;
+    width: 5rem;
+  }
+
+  .nav-links {
+    padding: unset;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #000000;
+    flex-direction: column;
+    text-align: center;
+    display: none; 
+  }
+
+  .nav-links.open {
+    display: flex; /* Show menu when open */
+  }
+
+  .nav-links li {
+    padding: 10px 30px;
+    a{
+      color:#fff;
+      font-weight: 600;
+      text-decoration: none;
+    }
+    &:hover{
+      background-color: #5c5c5c;
+      padding: 10px 30px;
+      width: 100%;
+    }
+  }
+  ul li:nth-child(2) {
+    margin-left: unset;
+  }
+
   }
 
   @media only screen and (max-width: 480px) {
